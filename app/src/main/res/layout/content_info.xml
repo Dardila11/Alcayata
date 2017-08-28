@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.senamoviles.alcayata.alcayata.InfoActivity"
+    tools:showIn="@layout/activity_info">
+
+    <ImageView
+        android:id="@+id/img_paso"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/huerto"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:elevation="2dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/colorGris">
+
+        <ImageButton
+
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGris"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_3d_rotation_black_18dp"/>
+
+    </LinearLayout>
+
+
+
+    <it.gmariotti.cardslib.library.view.CardViewNative
+        android:id="@+id/card_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        card:card_layout_resourceID="@layout/native_card_layout"
+        />
+
+    <it.gmariotti.cardslib.library.view.CardViewNative
+        android:id="@+id/card_sabias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        card:card_layout_resourceID="@layout/native_card_layout"/>
+
+
+</LinearLayout>
+

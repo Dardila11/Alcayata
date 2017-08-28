@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "110963304165",
+    "firebase_url": "https://alcayata-174f1.firebaseio.com",
+    "project_id": "alcayata-174f1",
+    "storage_bucket": "alcayata-174f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110963304165:android:9d923dea9f055e04",
+        "android_client_info": {
+          "package_name": "com.senamoviles.alcayata.alcayata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110963304165-4u9j4dhb03odtp8qii96ji7iplej1kva.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.senamoviles.alcayata.alcayata",
+            "certificate_hash": "a337e9099d5a0a42ea279961d4ad94239e88676f"
+          }
+        },
+        {
+          "client_id": "110963304165-83k3sgc6augismaltulmm4jbthqhecvb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtD5e1wChw5h-_9FHFqfXKXsreYOZ8I3o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110963304165-83k3sgc6augismaltulmm4jbthqhecvb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
