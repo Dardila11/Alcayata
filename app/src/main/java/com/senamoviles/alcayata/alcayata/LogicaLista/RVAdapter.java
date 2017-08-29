@@ -1,7 +1,12 @@
 package com.senamoviles.alcayata.alcayata.LogicaLista;
 
+import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +18,8 @@ import android.widget.Toast;
 
 import com.senamoviles.alcayata.alcayata.InfoActivity;
 import com.senamoviles.alcayata.alcayata.R;
+import com.senamoviles.alcayata.alcayata.SwipeView.FragmentoHuerto;
+import com.senamoviles.alcayata.alcayata.SwipeView.SwipePasos;
 
 import java.util.List;
 
@@ -50,35 +57,24 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PasoViewHolder> {
                 @Override
                 public void onClick(View v) {
 
-
                     switch (getAdapterPosition()){
                         case 0:
                             Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                            intent = new Intent(context, InfoActivity.class);
-                            intent.putExtra("nombre_paso","San Juan Evangelista");
+                            intent = new Intent(context, SwipePasos.class);
 
                             break;
                         case 1:
                             Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                            intent = new Intent(context, InfoActivity.class);
-                            intent.putExtra("nombre_paso","El Señor del Huerto");
+                            intent = new Intent(context, SwipePasos.class);
                             break;
                         case 2:
                             Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                            intent = new Intent(context, InfoActivity.class);
-                            intent.putExtra("nombre_paso","El Crucifijo");
+                            intent = new Intent(context, SwipePasos.class);
                             break;
                         case 3:
                             Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                            intent = new Intent(context, InfoActivity.class);
-                            intent.putExtra("nombre_paso","Virgen de los Dolores");
+                            intent = new Intent(context, SwipePasos.class);
                             break;
-
-                        default:
-                            Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                            intent = new Intent(context, InfoActivity.class);
-                            break;
-
                     }
                     context.startActivity(intent);
 

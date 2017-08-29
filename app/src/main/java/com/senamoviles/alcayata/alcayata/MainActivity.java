@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void iniciarlizarDatos(){
         pasos = new ArrayList<>();
-        pasos.add(new Paso("San Juan Evangelista", R.drawable.juan,"descripcion","sabias que",""));
         pasos.add(new Paso("El Señor del huerto", R.drawable.huerto,"descripcion", "sabias que",""));
         pasos.add(new Paso("El Crucifijo", R.drawable.crucifijo,"descripcion","sabias que",""));
+        pasos.add(new Paso("San Juan Evangelista", R.drawable.juan,"descripcion","sabias que",""));
         pasos.add(new Paso("Virgen de los Dolores", R.drawable.virgen,"descripcion","sabias que",""));
 
     }

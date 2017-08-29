@@ -107,9 +107,6 @@ public class InfoActivity extends AppCompatActivity implements BeaconConsumer {
         cardView_desc.setCard(card_desc);
 
 
-
-
-
         card_sabias = new CustomCardSabias(getApplicationContext());
         header_sabias = new CardHeader(getApplicationContext());
         header_sabias.setTitle("Sabias Que");
@@ -124,35 +121,7 @@ public class InfoActivity extends AppCompatActivity implements BeaconConsumer {
         cardView_sabias = (CardViewNative) findViewById(R.id.card_sabias);
         cardView_sabias.setCard(card_sabias);
     }
-    private void iniciarlizarDatos(){
-        pasos = new ArrayList<>();
 
-        pasos.add(new Paso("San Juan Evangelista", R.drawable.juan,"Juan fue conocido como el apóstol " +
-                "amado, estuvo en todos los momentos\n" +
-                "importantes al lado de Jesús, por eso vemos su imagen en cada una de las\n" +
-                "procesiones de Popayán",
-                "¿Sabías que los cargueros de Popayán pueden terminar con el hombro\n" +
-                        "reventado y prefieren morir antes que retirarse del paso durante el recorrido\n" +
-                        "procesional?",""));
-
-        pasos.add(new Paso("Señor del huerto", R.drawable.huerto,"Este paso representa el momento en que" +
-                " Jesús realiza una oración antes de\n" +
-                "ser capturado por los soldados romanos",
-                "¿Sabías que ni los terremotos ni las guerras han causado la suspensión de\n" +
-                        "las procesiones de Popayán?",""));
-
-        pasos.add(new Paso("El Crucifijo", R.drawable.crucifijo,"Jesús agoniza, sufre y finalmente muere en" +
-                " la Cruz",
-                "¿Sabías que en la Cruz de un paso de la Semana Santa de Popayán está\n" +
-                        "incrustado un trozo de la verdadera Cruz de Cristo?",""));
-
-        pasos.add(new Paso("Virgen de los Dolores", R.drawable.virgen,"María, la madre de Jesús, sufre un" +
-                " dolor tan grande por la muerte de su hijo,\n" +
-                "que es representado con una espada atravesándole el corazón",
-                "¿Sabías que La Virgen de los Dolores lleva en el pecho uno de los mayores\n" +
-                        "secretos religiosos de Popayán?",""));
-
-    }
     private void descargarArchivo(){
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReferenceFromUrl("gs://alcayata-174f1.appspot.com/");
