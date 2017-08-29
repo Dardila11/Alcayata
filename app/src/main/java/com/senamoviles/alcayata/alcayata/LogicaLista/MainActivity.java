@@ -1,19 +1,24 @@
-package com.senamoviles.alcayata.alcayata;
+package com.senamoviles.alcayata.alcayata.LogicaLista;
 
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Window;
+import android.widget.Toast;
 
-import com.senamoviles.alcayata.alcayata.LogicaLista.Paso;
-import com.senamoviles.alcayata.alcayata.LogicaLista.RVAdapter;
+import com.senamoviles.alcayata.alcayata.R;
+import com.senamoviles.alcayata.alcayata.SwipeView.FragmentoCrucifijo;
+import com.senamoviles.alcayata.alcayata.SwipeView.FragmentoDolores;
+import com.senamoviles.alcayata.alcayata.SwipeView.FragmentoEvangelista;
+import com.senamoviles.alcayata.alcayata.SwipeView.FragmentoHuerto;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,5 +51,10 @@ public class MainActivity extends AppCompatActivity {
     private void inicializarAdaptador(){
         RVAdapter adapter = new RVAdapter(pasos);
         rv.setAdapter(adapter);
+    }
+
+    public void avanzar(){
+
+
     }
 }

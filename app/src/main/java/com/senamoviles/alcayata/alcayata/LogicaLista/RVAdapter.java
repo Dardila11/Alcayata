@@ -30,6 +30,11 @@ import java.util.List;
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PasoViewHolder> {
 
 
+    List<Paso> pasos;
+
+    public RVAdapter(List<Paso> pasos ){
+        this.pasos = pasos;
+    }
 
     public static class PasoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
@@ -41,6 +46,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PasoViewHolder> {
         TextView paso_sabias;
         ImageView paso_foto;
         Context context;
+
 
 
 
@@ -59,27 +65,32 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PasoViewHolder> {
 
                     switch (getAdapterPosition()){
                         case 0:
-                            Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                             intent = new Intent(context, SwipePasos.class);
+                            intent.putExtra("paso","huerto");
 
                             break;
                         case 1:
-                            Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                             intent = new Intent(context, SwipePasos.class);
+                            intent.putExtra("paso","crucifijo");
                             break;
                         case 2:
-                            Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                             intent = new Intent(context, SwipePasos.class);
+                            intent.putExtra("paso","evangelista");
                             break;
                         case 3:
-                            Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(itemView.getContext(),"Has clickeado en la posición " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                             intent = new Intent(context, SwipePasos.class);
+                            intent.putExtra("paso","dolores");
                             break;
                     }
                     context.startActivity(intent);
 
 
                 }
+
             });
         }
 
@@ -87,12 +98,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PasoViewHolder> {
         public void onClick(View v) {
 
         }
-    }
-
-    List<Paso> pasos;
-
-    public RVAdapter(List<Paso> pasos){
-        this.pasos = pasos;
     }
 
 
@@ -120,4 +125,5 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PasoViewHolder> {
     public int getItemCount() {
         return pasos.size();
     }
+
 }

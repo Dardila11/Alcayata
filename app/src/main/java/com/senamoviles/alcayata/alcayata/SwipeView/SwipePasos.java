@@ -1,5 +1,6 @@
 package com.senamoviles.alcayata.alcayata.SwipeView;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.RemoteException;
 import android.support.design.widget.FloatingActionButton;
@@ -69,6 +70,41 @@ public class SwipePasos extends AppCompatActivity implements FragmentoHuerto.OnF
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        Intent intent = getIntent();
+        FragmentTransaction fragmentTransaction;
+
+        String nombre = intent.getStringExtra("paso");
+        switch (nombre){
+            case "huerto":
+                Fragment huerto = new FragmentoHuerto();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.container,huerto);
+                fragmentTransaction.commit();
+                break;
+            case "crucifijo":
+                Fragment crucifijo = new FragmentoCrucifijo();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.container,crucifijo);
+                fragmentTransaction.commit();
+                break;
+            case "evangelista":
+                Fragment evangelista = new FragmentoEvangelista();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.container,evangelista);
+                fragmentTransaction.commit();
+                break;
+            case "dolores":
+                Fragment dolores = new FragmentoDolores();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.container,dolores);
+                fragmentTransaction.commit();
+                break;
+
+
+        }
+
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -83,6 +119,18 @@ public class SwipePasos extends AppCompatActivity implements FragmentoHuerto.OnF
         beaconManager.bind(this);
 
 
+
+
+    }
+    @Override
+    public void onBackPressed() {
+        int fragments = getSupportFragmentManager().getBackStackEntryCount();
+        if (fragments == 1) {
+            finish();
+            return;
+        }
+
+        super.onBackPressed();
     }
 
     @Override
@@ -164,8 +212,9 @@ public class SwipePasos extends AppCompatActivity implements FragmentoHuerto.OnF
                                     //El señor del Huerto
                                     Toast.makeText(SwipePasos.this, "Huerto", Toast.LENGTH_SHORT).show();
                                     FragmentoHuerto huerto = new FragmentoHuerto();
-                                    transaction =fr.beginTransaction();
+                                    transaction = fr.beginTransaction();
                                     transaction.replace(R.id.main_content, huerto);
+                                    transaction.addToBackStack(null);
                                     transaction.commit();
                                     break;
                                 case "10903":
@@ -173,24 +222,27 @@ public class SwipePasos extends AppCompatActivity implements FragmentoHuerto.OnF
                                     //card_desc.setDesc("Esta es la descripcion del paso El Crucifijo");
                                     Toast.makeText(SwipePasos.this, "Crucifijo", Toast.LENGTH_SHORT).show();
                                     FragmentoCrucifijo crucifijo = new FragmentoCrucifijo();
-                                    transaction =fr.beginTransaction();
+                                    transaction = fr.beginTransaction();
                                     transaction.replace(R.id.main_content, crucifijo);
+                                    transaction.addToBackStack(null);
                                     transaction.commit();
                                     break;
                                 case "51626":
                                     // San Juan Evangelista
                                     Toast.makeText(SwipePasos.this, "Evangelista", Toast.LENGTH_SHORT).show();
                                     FragmentoEvangelista evangelista = new FragmentoEvangelista();
-                                    transaction =fr.beginTransaction();
+                                    transaction = fr.beginTransaction();
                                     transaction.replace(R.id.main_content, evangelista);
+                                    transaction.addToBackStack(null);
                                     transaction.commit();
                                     break;
                                 case "43984":
                                     // Virgen de los Dolores
                                     Toast.makeText(SwipePasos.this, "Dolores", Toast.LENGTH_SHORT).show();
                                     FragmentoDolores dolores = new FragmentoDolores();
-                                    transaction =fr.beginTransaction();
+                                    transaction = fr.beginTransaction();
                                     transaction.replace(R.id.main_content, dolores);
+                                    transaction.addToBackStack(null);
                                     transaction.commit();
                                     break;
                             }

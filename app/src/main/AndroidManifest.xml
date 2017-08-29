@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Bienvenida" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".LogicaLista.MainActivity" />
         <activity
             android:name=".InfoActivity"
             android:label="@string/title_activity_info"

@@ -6,10 +6,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.RelativeLayout;
+
+import com.senamoviles.alcayata.alcayata.LogicaLista.MainActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
